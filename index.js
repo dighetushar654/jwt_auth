@@ -9,7 +9,7 @@ app.get("/api", (req, res) => {
 });
 
 app.post("/api/login", (req, res) => {
-    const user = { id: 3};
+    const user = { id: 3, name: "Tushar", city:"Nashik"};
     const token = jwt.sign({ user }, 'my_secret_key');
     res.json({
         token: token
